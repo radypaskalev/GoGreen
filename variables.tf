@@ -3,6 +3,14 @@ variable "aws_region" {
   default     = "us-west-1"
 }
 
+# subnets to be uesed in web tier, provide by Farruh
+variable "web-subnets" {
+  description = "subnets used for web tier"
+  default = "subnet-02246346e41f26b7b,subnet-0166320b56ea2c7c3"
+}
+
+
+
 # Amazon Linux 2 AMI 2.0.20200722.0 x86_64 HVM 8GB
 variable "aws_amis" {
   default = {
@@ -16,7 +24,10 @@ variable "availability_zones" {
 }
 
 variable "key_name" {
-  description = "CA_key"
+  type  = string
+  default = "CA_key"
+  description = "my key is N CA"
+
 }
 
 variable "instance_type" {
@@ -31,10 +42,10 @@ variable "asg_min" {
 
 variable "asg_max" {
   description = "Max numbers of servers in ASG"
-  default     = "2"
+  default     = "1"
 }
 
 variable "asg_desired" {
   description = "Desired numbers of servers in ASG"
-  default     = "2"
+  default     = "1"
 }
