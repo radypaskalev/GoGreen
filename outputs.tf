@@ -11,5 +11,5 @@ output "asg_name" {
 }
 
 output "elb_name" {
-  value = aws_elb.web-tier-elb.dns_name
+  value = aws_lb.web-tier-lb.dns_name
 }

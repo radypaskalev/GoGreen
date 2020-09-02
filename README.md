@@ -1,2 +1,13 @@
 # GoGreen
-Web tier creation with ASG ELB Launch template an dtarget group, ( s3 role must come from gregory to refer in Launch configuration ).
+
+Web tier creation with the following services:
+SG
+ALB
+Auto Scaling Group
+Auto Scaling policy with minimum and max scaling metrics
+Launch Configuration with wordpress bootstrap
+Target group
+s3 role
+s3 bucket   
+SNS topic
+Cloudwatch alarm with HTTP 400 errors trigger
