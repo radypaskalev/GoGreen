@@ -92,9 +92,9 @@ resource "aws_autoscaling_group" "web-tier-asg" {
 }
 
 resource "aws_launch_configuration" "web-tier-lc" {
-  name          = "web-tier-lc"
-  image_id      = var.aws_amis[var.aws_region]
-  instance_type = var.instance_type
+  name                 = "web-tier-lc"
+  image_id             = var.aws_amis[var.aws_region]
+  instance_type        = var.instance_type
   iam_instance_profile = "${aws_iam_instance_profile.s3-profile.id}"
 
   # Security group
